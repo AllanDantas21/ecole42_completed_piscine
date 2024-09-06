@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:08:47 by aldantas          #+#    #+#             */
-/*   Updated: 2024/06/01 22:34:34 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:09:57 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ static void	ft_micro_putnbr(int n)
 	if (n >= 10)
 		ft_micro_putnbr(n / 10);
 	write(1, &base[n % 10], 1);
-		
 }
 
 void	ft_print_comb2(void)
