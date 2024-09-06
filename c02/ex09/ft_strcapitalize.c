@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:26:23 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:32:55 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:39:44 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	is_alphanum(char c)
+static int	is_alphanum(char c)
 {
 	return ((c >= 'a' && c <= 'z')
 		|| (c >= 'A' && c <= 'Z')
