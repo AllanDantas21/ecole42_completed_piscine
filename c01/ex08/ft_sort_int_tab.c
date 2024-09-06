@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:27:51 by aldantas          #+#    #+#             */
-/*   Updated: 2023/08/04 10:35:24 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:14:21 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,9 @@ void	ft_sort_int_tab(int *tab, int size)
 		i = 0;
 	}
 }
-/*int     main(void)
+/*
+#include <stdio.h>
+int     main(void)
 {       
 	int b;
         int nb[4] = {3,2,5,1};

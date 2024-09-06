@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 16:27:08 by aldantas          #+#    #+#             */
-/*   Updated: 2023/08/03 16:41:16 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:13:17 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	ft_div_mod(int a, int b, int *div, int *mod)
 {
 	*div = a / b;

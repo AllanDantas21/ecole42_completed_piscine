@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:29:22 by aldantas          #+#    #+#             */
-/*   Updated: 2023/08/03 17:39:27 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:13:22 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 void	ft_ultimate_div_mod(int *a, int *b)
 {
 	int	div;

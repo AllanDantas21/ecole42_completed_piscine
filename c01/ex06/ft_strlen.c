@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 12:19:03 by aldantas          #+#    #+#             */
-/*   Updated: 2023/08/03 18:07:05 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:16:03 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*#include <stdio.h>*/
-/*#include <unistd.h>*/
+
 int	ft_strlen(char *str)
-{	
+{
 	int	i;
 
 	i = 0;

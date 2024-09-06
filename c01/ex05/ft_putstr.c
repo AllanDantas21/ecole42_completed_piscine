@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:48:16 by aldantas          #+#    #+#             */
-/*   Updated: 2023/08/08 10:32:34 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/06 00:16:04 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putstr(char *str)
 }
 /*int main()
 {
-	char ch[9] = {'a','b','c','d','e','f','g','h','i'}; 
+	char *test = "Hello World!"; 
 
-	ft_putstr(ch);
+	ft_putstr(test);
 }*/
