@@ -7,5 +7,5 @@
      - C03 -> 100%
      - C04 -> 80% -> faltando atoi_base
      - C05 -> 90% -> faltando ft_ten_queens_puzzle💀💀💀💀💀💀
-     - c06 -> 100
+     - c06 -> 100%
 
