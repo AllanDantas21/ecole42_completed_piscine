@@ -5,6 +5,7 @@
      -  C01 -> 100%
      - C02 -> 90% -> faltando o ex12;
      - C03 -> 100%
-     - C04 -> 60% -> faltando putnbr_base e atoi_base
+     - C04 -> 80% -> faltando atoi_base
      - C05 -> 90% -> faltando ft_ten_queens_puzzle💀💀💀💀💀💀
-     - c06 -> 100%
+     - c06 -> 100
+
