@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:53:19 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 01:53:33 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/07 20:17:54 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,4 @@
 // ◦ a base contém os caracteres + ou - ou whitespaces;
 // • Ela deverá ser prototipada da seguinte maneira:
 // int ft_atoi_base(char *str, char *base);
+
