@@ -3,29 +3,86 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:49:41 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 01:55:06 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/08 20:23:16 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// Escreva uma função que mostre todas as possibilidades de posicionar dez damas em
-// um tabuleiro de 10x10 sem que elas possam ser atingidas com um único movimento,
-// e retorne o número de possibilidades.
-// • A recursividade deverá ser utilizada para resolver este problema.
-// • Ela deverá ser prototipada da seguinte maneira:
-// int ft_ten_queens_puzzle(void);
-// • A exibição deverá ser feita da seguinte maneira:
-// $>./a.out | cat -e
-// 0257948136$
-// 0258693147$
-// ...
-// 4605713829$
-// 4609582731$
-// ...
-// 9742051863$
-// $>
-// • A sequência é lida da esquerda para a direita. O primeiro dígito corresponde à
-// posição da primeira dama na primeira coluna (o índice começando com 0). O
-// enésimo número corresponde à posição da enésima dama na enésima coluna.
+#include <unistd.h>
+
+static void	print_board(int board[10], int col)
+{
+	int	j;
+	int	nb;
+
+	if (col >= 10)
+	{
+		j = 0;
+		while (j < 10)
+		{
+			nb = board[j] + '0';
+			write(1, &nb, 1);
+			j++;
+		}
+		write(1, "\n", 1);
+		return ;
+	}
+}
+
+static int	is_safe(int board[10], int row, int col)
+{
+	int	i;
+
+	i = 0;
+	while (i < col)
+	{
+		if (board[i] == row
+			|| board[i] - i == row - col
+			|| board[i] + i == row + col)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+static int	solve_queens(int board[10], int col)
+{
+	int	i;
+	int	count;
+
+	i = 0;
+	count = 0;
+	if (col >= 10)
+	{
+		print_board(board, col);
+		return (1);
+	}
+	while (i < 10)
+	{
+		if (is_safe(board, i, col))
+		{
+			board[col] = i;
+			count += solve_queens(board, col + 1);
+		}
+		i++;
+	}
+	return (count);
+}
+
+int	ft_ten_queens_puzzle(void)
+{
+	int	board[10];
+	int	i;
+
+	i = 0;
+	while (i < 10)
+		board[i++] = 0;
+	return (solve_queens(board, 0));
+}
+/*
+int main(void)
+{
+	return ft_ten_queens_puzzle();
+}/**/
