@@ -6,11 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 01:18:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/08 01:23:09 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/08 01:31:08 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int    ft_strlen(const char *s)
+#include <stdlib.h>
+
+int    ft_strlen(char *s)
 {
     int	i;
 
@@ -20,14 +22,14 @@ int    ft_strlen(const char *s)
     return (i);
 }
 
-char	*ft_strdup(const char *s)
+char	*ft_strdup(char *src)
 {
 	char	*s1;
 	char	*s2;
 	char	*pos;
 
-	s1 = (char *)s;
-	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	s1 = src;
+	s2 = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!s2)
 		return (NULL);
 	pos = s2;
