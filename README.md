@@ -3,7 +3,7 @@
     
      -  C00-> 100%
      -  C01 -> 100%
-     - C02 -> 90% -> faltando o ex12;
+     - C02 -> 100%
      - C03 -> 100%
      - C04 -> 80% -> faltando atoi_base
      - C05 -> 90% -> faltando ft_ten_queens_puzzle💀💀💀💀💀💀
