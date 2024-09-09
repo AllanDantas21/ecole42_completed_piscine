@@ -8,5 +8,5 @@
      - C04 -> 100%
      - C05 -> 90% -> falta ft_ten_queens_puzzle💀💀💀💀💀💀
      - c06 -> 100%
-     - c07 -> 30%
+     - c07 -> 60% -> falta convert_base e ft_split
 
