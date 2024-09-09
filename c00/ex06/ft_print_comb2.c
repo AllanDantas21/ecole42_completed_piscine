@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:08:47 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:09:57 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 00:37:38 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,8 @@ void	ft_print_comb2(void)
 		first++;
 	}
 }
+
+/*int	main(void)
+{
+	ft_print_comb2();
+}/**/

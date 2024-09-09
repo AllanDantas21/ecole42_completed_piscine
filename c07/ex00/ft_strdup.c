@@ -6,20 +6,20 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 01:18:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/08 01:31:08 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 00:58:14 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int    ft_strlen(char *s)
+int	ft_strlen(char *s)
 {
-    int	i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
 
 char	*ft_strdup(char *src)
