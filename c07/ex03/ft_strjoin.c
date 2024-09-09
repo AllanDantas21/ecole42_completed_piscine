@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 01:19:33 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/09 01:17:45 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 01:33:35 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int	ft_strlen(char *s)
+static int	ft_strlen(char *s)
 {
 	int	i;
 
@@ -22,7 +22,7 @@ int	ft_strlen(char *s)
 	return (i);
 }
 
-void	fill_string(char *str, int size, char **strs, char *sep)
+static void	fill_string(char *str, int size, char **strs, char *sep)
 {
 	int	i;
 	int	k;
@@ -41,22 +41,29 @@ void	fill_string(char *str, int size, char **strs, char *sep)
 	*str = 0;
 }
 
+static int	get_bytes(int i, int size, char **strs)
+{
+	int	bytes;
+
+	bytes = 0;
+	while (i < size)
+		bytes += ft_strlen(strs[i++]);
+	return (bytes);
+}
+
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*str;
+	int		bytes;
 	int		i;
-	int		j;
 
 	if (size == 0)
 		return (malloc(1));
 	i = 0;
-	j = 0;
-	while (i < size)
-		j += ft_strlen(strs[i++]);
-	str = malloc(j + (size - 1) * ft_strlen(sep) + 1);
+	bytes = get_bytes(i, size, strs);
+	str = malloc(bytes + (size - 1) * ft_strlen(sep) + 1);
 	if (!str)
 		return (NULL);
-	i = 0;
 	fill_string(str, size, strs, sep);
 	return (str);
 }
