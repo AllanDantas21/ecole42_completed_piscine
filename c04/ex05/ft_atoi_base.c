@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:53:19 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/09 00:12:22 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 00:33:41 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	ft_strlen(const char *str)
 	return (i);
 }
 
-int	convert(char *str, int i, char *base)
+int	convert_base(char *str, int i, char *base)
 {
 	int	res;
 	int	base_len;
@@ -71,16 +71,14 @@ int	ft_check_base(const char *base)
 	return (1);
 }
 
-int	check_sign(const char *str, int *i, int *min, int *sign)
+int	check_sign(const char *str, int *i, int *sign)
 {
 	while (str[*i] == '-' || str[*i] == '+')
 	{
 		if (str[*i] == '-')
-			(*min)++;
+			*sign *= -1;
 		(*i)++;
 	}
-	if ((*min) % 2)
-		*sign = -1;
 	return (*i);
 }
 
@@ -89,17 +87,15 @@ int	ft_atoi_base(char *str, char *base)
 	int	i;
 	int	sign;
 	int	res;
-	int	min;
 
 	i = 0;
-	min = 0;
 	sign = 1;
 	if (!str || !base || !ft_check_base(base))
 		return (0);
 	while ((str[i] == 32) || (str[i] >= 9 && str[i] <= 13))
 		i++;
-	check_sign(str, &i, &min, &sign);
-	res = convert(str, i, base);
+	check_sign(str, &i, &sign);
+	res = convert_base(str, i, base);
 	return (res * sign);
 }
 /*
