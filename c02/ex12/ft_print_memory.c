@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/07 23:25:55 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 01:43:22 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,19 @@
 
 void	ft_print_hex(unsigned char c)
 {
-	const char	*hex;
+	const char	*hex = "0123456789abcdef";
 
-	hex = "0123456789abcdef";
 	write(1, &hex[c / 16], 1);
 	write(1, &hex[c % 16], 1);
 }
 
 void	ft_print_address(unsigned long long addr)
 {
-	const char	*hex;
+	const char	*hex = "0123456789abcdef";
 	char		address[16];
 	int			i;
 
 	i = 15;
-	hex = "0123456789abcdef";
 	while (i >= 0)
 	{
 		address[i] = hex[addr % 16];
