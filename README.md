@@ -1,6 +1,6 @@
 
 -   **Refazendo a Piscine 42**:
-    
+    ## lembrar de compilar com as flags e testar cada lista antes de entregar ##
      -  C00-> 100%
      -  C01 -> 100%
      - C02 -> 100%
