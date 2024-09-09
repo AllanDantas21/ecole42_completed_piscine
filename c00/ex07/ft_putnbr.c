@@ -6,34 +6,34 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:35:21 by aldantas          #+#    #+#             */
-/*   Updated: 2024/06/01 23:03:53 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/09 00:30:26 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
 
-void	ft_putnbr(int nbr)
+void	ft_putnbr(int nb)
 {
 	char	*base;
 
 	base = "0123456789";
-	if (nbr == -2147483648)
+	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
 		return ;
 	}
-	else if (nbr < 0)
+	else if (nb < 0)
 	{
 		write(1, "-", 1);
-		ft_putnbr(nbr *= -1);
+		ft_putnbr(nb *= -1);
 		return ;
 	}
-	else if (nbr >= 10)
-		ft_putnbr(nbr / 10);
-	write(1, &base[nbr % 10], 1);
+	else if (nb >= 10)
+		ft_putnbr(nb / 10);
+	write(1, &base[nb % 10], 1);
 }
 /*
 int main(void)
 {
-	ft_putnbr(62931);
-}*/
+	ft_putnbr(42);
+}/**/
