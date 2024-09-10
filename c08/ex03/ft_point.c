@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_point.h                                         :+:      :+:    :+:   */
+/*   ft_point.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 02:33:24 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 20:23:15 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/10 20:21:51 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/10 20:22:13 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_POINT_H
-# define FT_POINT_H
-
-typedef struct s_point
+#include "ft_point.h"
+void set_point(t_point *point)
 {
-    int x;
-    int y;
-}	t_point;
+    point->x = 42;
+    point->y = 21;
+}
 
-#endif
+int main(void)
+{
+    t_point point;
+    set_point(&point);
+    return (0);
+}
