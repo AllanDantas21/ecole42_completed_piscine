@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_abs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 02:33:06 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 15:55:12 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/10 15:54:46 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/10 15:54:53 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
+#include <stdio.h>
 
-static inline int	abs(int abs)
+#include "ft_abs.h"
+
+int	main(void)
 {
-	if (abs < 0)
-		return (-abs);
-	return (abs);
+	int	index;
+
+	index = -5;
+	while (index < 5)
+	{
+		printf("macros::abs(%d) = %d\n", index, ABS(index));
+		index++;
+	}
 }
-
-# define ABS abs
-
-#endif

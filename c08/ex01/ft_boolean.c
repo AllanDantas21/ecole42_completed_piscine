@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_abs.h                                           :+:      :+:    :+:   */
+/*   ft_boolean.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/09 02:33:06 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 15:55:12 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/10 13:20:03 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/10 13:33:34 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_ABS_H
-# define FT_ABS_H
-
-static inline int	abs(int abs)
+#include "ft_boolean.h"
+void ft_putstr(char *str)
 {
-	if (abs < 0)
-		return (-abs);
-	return (abs);
+    while (*str)
+    write(1, str++, 1);
 }
-
-# define ABS abs
-
-#endif
+t_bool ft_is_even(int nbr)
+{
+    return ((EVEN(nbr)) ? TRUE : FALSE);
+}
+int main(int argc, char **argv)
+{
+    (void)argv;
+    if (ft_is_even(argc - 1) == TRUE)
+    ft_putstr(EVEN_MSG);
+    else
+    ft_putstr(ODD_MSG);
+    return (SUCCESS);
+}
