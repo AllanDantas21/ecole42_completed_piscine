@@ -6,11 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 02:34:15 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 21:21:20 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/10 21:34:28 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_strs_to_tab.h"
+#include "ft_stock_str.h"
 #include <stdlib.h>
 
 static int	ft_strlen(char *str)
@@ -80,4 +80,4 @@ int main(int argc, char **argv)
 		i++;
 	}
 	return (0);
-}/**/
+}*/

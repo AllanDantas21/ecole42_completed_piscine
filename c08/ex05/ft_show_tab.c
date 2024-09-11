@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 20:26:24 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 21:23:39 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/10 21:34:30 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,3 +59,8 @@ void	ft_show_tab(struct s_stock_str *par)
 		i++;
 	}
 }
+/*
+int	main(int argc, char **argv)
+{
+	ft_show_tab(ft_strs_to_tab(argc, argv));
+}*/
