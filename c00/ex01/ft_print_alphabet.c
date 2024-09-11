@@ -3,16 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:04:26 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:10:37 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 19:41:02 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "unistd.h"
+#include <unistd.h>
 
 void	ft_print_alphabet(void)
 {
-	write(1, "abcdefghigklmnopqrstuivwxyz", 26);
+	char	c;
+
+	c = 97;
+	while (c <= 122)
+	{
+		write(1, &c, 1);
+		c++;
+	}
 }
