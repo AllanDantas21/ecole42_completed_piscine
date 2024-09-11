@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:35:21 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 21:20:44 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 11:58:39 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,4 @@ void	ft_putnbr(int nb)
 int main(void)
 {
 	ft_putnbr(42);
-}/**/
+}*/
