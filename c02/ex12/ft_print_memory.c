@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/09 02:07:04 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:06:00 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,10 @@ void	ft_print_address(unsigned long long addr)
 	}
 	i = 0;
 	while (address[i] != '\0')
-		write(1, &address[i++], 1);
+	{
+		write(1, &address[i], 1);
+		i++;
+	}
 }
 
 void	ft_hex_content(unsigned char *memory, unsigned int i,
@@ -95,8 +98,8 @@ void	*ft_print_memory(void *addr, unsigned int size)
 }
 /*
 int main() {
-	char str[] = "Bonjour les aminches\t\n\tc'est fou\tce qu'on peut
-	faire avec\t\n\tprint_memory\n\nlol.lol\n ";
+	char str[] = "Bonjour les aminches\t\n\tc'est fou\tce qu'on \
+	peutfaire avec\t\n\tprint_memory\n\nlol.lol\n ";
 	ft_print_memory(str, sizeof(str));
 	return 0;
-}/**/
+}*/
