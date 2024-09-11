@@ -6,11 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:03:51 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:56:01 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 12:17:50 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static unsigned int	ft_strlen(const char *str)
+static unsigned int	ft_strlen(char *str)
 {
 	unsigned int	len;
 
@@ -20,7 +20,7 @@ static unsigned int	ft_strlen(const char *str)
 	return (len);
 }
 
-unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
 	unsigned int	len;
 
@@ -29,8 +29,8 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 	{
 		size -= 1;
 		while (*src && size--)
-			*dst++ = *src++;
-		*dst = '\0';
+			*dest++ = *src++;
+		*dest = '\0';
 	}
 	return (len);
 }
@@ -41,10 +41,10 @@ unsigned int	ft_strlcpy(char *dst, const char *src, unsigned int size)
 int main(void)
 {
 	char src[] = "Hello, world!";
-	char dst[20];
-	unsigned int len = ft_strlcpy(dst, src, sizeof(dst));
+	char dest[20];
+	unsigned int len = ft_strlcpy(dest, src, sizeof(dest));
 	
-	printf("Copied string: %s\n", dst);
+	printf("Copied string: %s\n", dest);
 	printf("Length of copied string: %u\n", len);
 	
 	return 0;
