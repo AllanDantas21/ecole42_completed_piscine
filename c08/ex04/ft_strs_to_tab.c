@@ -6,14 +6,14 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 02:34:15 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 21:13:58 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/10 21:21:20 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_strs_to_tab.h"
 #include <stdlib.h>
 
-int	ft_strlen(char *str)
+static int	ft_strlen(char *str)
 {
 	int	i;
 
@@ -23,7 +23,7 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*copy_str(char *src)
+static char	*copy_str(char *src)
 {
 	int		i;
 	char	*dest;
