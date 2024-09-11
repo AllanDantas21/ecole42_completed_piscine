@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 02:34:15 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 21:08:28 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/10 21:13:58 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ char	*copy_str(char *src)
 	return (dest);
 }
 
-struct s_stock_str *ft_strs_to_tab(int ac, char **av)
+struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	int					i;
 	struct s_stock_str	*tab;
 
 	i = 0;
-	tab = (struct s_stock_str *)malloc(sizeof(struct s_stock_str) * (ac + 1));
+	tab = malloc(sizeof(struct s_stock_str) * (ac + 1));
 	if (!tab)
 		return (NULL);
 	while (i < ac)
@@ -59,9 +59,10 @@ struct s_stock_str *ft_strs_to_tab(int ac, char **av)
 		i++;
 	}
 	tab[i].str = 0;
+	tab[i].copy = 0;
 	return (tab);
 }
-
+/*
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -79,4 +80,4 @@ int main(int argc, char **argv)
 		i++;
 	}
 	return (0);
-}
+}/**/
