@@ -6,11 +6,26 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 23:06:40 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:10:14 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 01:57:38 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "unistd.h"
+
+void	print_array(int *arr, int n)
+{
+	static const char	*base = "0123456789";
+	int					i;
+
+	i = 0;
+	while (i < n)
+	{
+		write(1, &base[arr[i]], 1);
+		i++;
+	}
+	if (arr[0] != 10 - n)
+		write(1, ", ", 2);
+}
 
 void	ft_recursive_combn(int n, int pos, int *arr, int last_digit)
 {
@@ -19,10 +34,7 @@ void	ft_recursive_combn(int n, int pos, int *arr, int last_digit)
 	i = 0;
 	if (pos == n)
 	{
-		while (i < n)
-			write(1, &"0123456789"[arr[i++]], 1);
-		if (arr[0] != 10 - n)
-			write(1, ", ", 2);
+		print_array(arr, n);
 		return ;
 	}
 	i = last_digit + 1;
@@ -40,10 +52,9 @@ void	ft_print_combn(int n)
 	if (n > 0 && n < 10)
 		ft_recursive_combn(n, 0, arr, -1);
 }
-
 /*
 int main()
  {
-	ft_print_combn(9);
+	ft_print_combn(5);
  	return 0;
 }*/
