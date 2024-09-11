@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 23:06:40 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/11 01:57:38 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/11 03:12:38 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ void	ft_recursive_combn(int n, int pos, int *arr, int last_digit)
 	while (i <= 9)
 	{
 		arr[pos] = i;
-		ft_recursive_combn(n, pos + 1, arr, i++);
+		ft_recursive_combn(n, pos + 1, arr, i);
+		i++;
 	}
 }
 
@@ -55,6 +56,6 @@ void	ft_print_combn(int n)
 /*
 int main()
  {
-	ft_print_combn(5);
+	ft_print_combn(2);
  	return 0;
 }*/
