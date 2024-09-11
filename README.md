@@ -12,3 +12,4 @@
      - c06 -> 100%
      - c07 -> 60% -> falta convert_base e ft_split
      - c08 -> 100% 
+     - c09 -> 65% -> ft_split tbm
