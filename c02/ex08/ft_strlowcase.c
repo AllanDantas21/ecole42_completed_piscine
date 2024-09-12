@@ -6,11 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 10:17:37 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:22:30 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:26:15 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>*/
 
 char	*ft_strlowcase(char *str)
 {
@@ -28,7 +26,9 @@ char	*ft_strlowcase(char *str)
 	return (str);
 }
 
-/*int     main()
+/*
+#include <stdio.h>
+int     main()
 {
         char ch[] = "awasShK";
 

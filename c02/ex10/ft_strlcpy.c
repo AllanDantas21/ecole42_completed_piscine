@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 16:03:51 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/11 12:17:50 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:27:17 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 }
 /*
 #include <stdio.h>
-#include <string.h>
 
 int main(void)
 {

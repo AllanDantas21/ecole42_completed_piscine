@@ -6,11 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:26:23 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:39:44 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:26:52 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 static int	is_alphanum(char c)
 {
@@ -43,6 +41,7 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 /*
+#include <stdio.h>
 int main() {
 	char str1[] = "oi, tudo bem? 42palavras quarenta-e-duas; cinquenta+e+um";
 	char str2[] = "hello world";

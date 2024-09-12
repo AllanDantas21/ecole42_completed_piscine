@@ -6,11 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 10:35:13 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:22:24 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:24:45 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>*/
 
 int	ft_str_is_alpha(char *str)
 {
@@ -31,7 +29,9 @@ int	ft_str_is_alpha(char *str)
 	else
 		return (0);
 }
-/*int	main()
+/*
+#include <stdio.h>
+int	main()
 {
        printf("%d", ft_str_is_alpha("asda"));
 }*/

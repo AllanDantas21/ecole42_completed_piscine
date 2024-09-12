@@ -6,11 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 11:21:54 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:22:29 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:26:04 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <stdio.h>*/
 
 char	*ft_strupcase(char *str)
 {
@@ -27,7 +25,9 @@ char	*ft_strupcase(char *str)
 	}
 	return (str);
 }
-/*int     main()
+/*
+#include <stdio.h>
+int     main()
 {
 	char ch[] = "AWFsShK";
 	

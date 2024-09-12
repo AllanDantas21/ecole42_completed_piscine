@@ -6,12 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 14:55:56 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:22:23 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:25:00 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include <unistd.h>*/
-/*#include <stdio.h>*/
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
@@ -30,7 +27,9 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	}
 	return (dest);
 }
-/*int   main(void)
+/*
+#include <stdio.h>
+int   main(void)
 {
         char ch[10] = "ABACATE";
         char dest[11];

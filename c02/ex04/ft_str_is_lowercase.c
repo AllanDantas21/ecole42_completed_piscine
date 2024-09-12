@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 10:51:56 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:34:05 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 00:25:28 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ int	ft_str_is_lowercase(char *str)
 	else
 		return (0);
 }
-/*int     main()
+/*
+#include <stdio.h>
+int     main()
 {
         printf("%s",ft_str_is_lowercase(""));
 }*/
