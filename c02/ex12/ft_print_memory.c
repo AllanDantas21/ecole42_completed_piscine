@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/11 12:06:00 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/12 16:43:56 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,10 @@ void	ft_print_hex(unsigned char c)
 void	ft_print_address(unsigned long long addr)
 {
 	const char	*hex = "0123456789abcdef";
-	char		address[16];
-	int			i;
 
-	i = 15;
-	while (i >= 0)
-	{
-		address[i] = hex[addr % 16];
-		addr /= 16;
-		i--;
-	}
-	i = 0;
-	while (address[i] != '\0')
-	{
-		write(1, &address[i], 1);
-		i++;
-	}
+	if (addr >= 16)
+		ft_print_address(addr / 16);
+	write(1, &hex[addr % 16], 1);
 }
 
 void	ft_hex_content(unsigned char *memory, unsigned int i,
@@ -96,10 +84,10 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	}
 	return (addr);
 }
-/*
+
 int main() {
 	char str[] = "Bonjour les aminches\t\n\tc'est fou\tce qu'on \
 	peutfaire avec\t\n\tprint_memory\n\nlol.lol\n ";
 	ft_print_memory(str, sizeof(str));
 	return 0;
-}*/
+}
