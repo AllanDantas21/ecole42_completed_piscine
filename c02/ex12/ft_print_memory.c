@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/13 00:25:38 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:18:06 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,12 @@ static void	ft_print_address(unsigned long long addr)
 		i--;
 	}
 	i = 0;
-	while (address[i] != '\0')
+	while (i < 16)
 	{
 		write(1, &address[i], 1);
 		i++;
 	}
+	write(1, ": ", 2);
 }
 
 static void	ft_hex_content(unsigned char *memory, unsigned int limit)
@@ -42,8 +43,8 @@ static void	ft_hex_content(unsigned char *memory, unsigned int limit)
 	{
 		if (i < limit)
 		{
-			write(1, "0123456789abcdef" + memory[i] / 16, 1);
-			write(1, "0123456789abcdef" + memory[i] % 16, 1);
+			write(1, &"0123456789abcdef"[memory[i] / 16], 1);
+			write(1, &"0123456789abcdef"[memory[i] % 16], 1);
 		}
 		else
 			write(1, "  ", 2);
@@ -77,21 +78,20 @@ static unsigned int	adjust_limit(unsigned int i, unsigned int size)
 
 void	*ft_print_memory(void *addr, unsigned int size)
 {
-	unsigned int	i;
-	unsigned int	limit;
-	unsigned char	*memory;
+	unsigned int		i;
+	unsigned int		limit;
+	unsigned long long	memory;
 
 	if (size == 1)
 		return (addr);
 	i = 0;
-	memory = (unsigned char *)addr;
 	while (i <= size)
 	{
 		limit = adjust_limit(i, size);
-		ft_print_address((unsigned long long)(memory + i));
-		write(1, ": ", 2);
-		ft_hex_content(memory + i, limit);
-		ft_print_chars(memory + i, limit);
+		memory = (unsigned long long)addr + i;
+		ft_print_address(memory + i);
+		ft_hex_content(addr + i, limit);
+		ft_print_chars(addr + i, limit);
 		write(1, "\n", 1);
 		i += 16;
 	}
