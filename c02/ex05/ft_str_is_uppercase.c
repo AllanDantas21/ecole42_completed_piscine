@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/07 10:58:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/12 00:25:42 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/13 00:28:35 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,5 @@ int	ft_str_is_uppercase(char *str)
 #include <stdio.h>
 int     main()
 {
-        ft_str_is_uppercase("");
+       printf("%d", ft_str_is_uppercase("ASD"));
 }*/
