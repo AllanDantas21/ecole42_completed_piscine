@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:46:46 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/12 22:32:13 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/13 00:27:11 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putstr_non_printable(char *str)
 		i++;
 	}
 }
-
+/*
 int main() {
 	// Teste: String com caracteres não imprimíveis
 	char str2[] = "This is a \t test \n string.";
@@ -52,4 +52,4 @@ int main() {
 	ft_putchar('\n');
 
 	return 0;
-}
+}*/
