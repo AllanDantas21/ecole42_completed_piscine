@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:49:41 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 14:59:22 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 16:31:44 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,8 +81,8 @@ int	ft_ten_queens_puzzle(void)
 		board[i++] = 0;
 	return (solve_queens(board, 0));
 }
-
+/*
 int main(void)
 {
 	return ft_ten_queens_puzzle();
-}
+}*/

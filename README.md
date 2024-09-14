@@ -10,6 +10,6 @@
      - C04 -> 100%
      - C05 -> 100%
      - c06 -> 100%
-     - c07 -> 60% -> falta convert_base e ft_split
+     - c07 -> 85% -> falta convert_base
      - c08 -> 100% 
-     - c09 -> 65% -> ft_split tbm
+     - c09 -> 100%

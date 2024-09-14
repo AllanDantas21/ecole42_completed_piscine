@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:32:58 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 01:35:02 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 16:08:18 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,4 @@ int	main(void)
 	printf("Resultado 5: %d\n", ft_atoi(str5));  // Deve imprimir -2147483648
 
 	return (0);
-}/**/
+}*/

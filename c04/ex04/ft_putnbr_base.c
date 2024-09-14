@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:51:24 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/07 17:56:12 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 16:08:30 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,15 @@ void	ft_putnbr_base(int nbr, char *base)
 		}
 	}
 }
-
-// #include <stdio.h>
-// int		main(void)
-// {
-// 	ft_putnbr_base(-12, "01");
-// 	printf("\n");
-// 	ft_putnbr_base(40, "poneyvif");
-// 	printf("\n");
-// 	ft_putnbr_base(894867, "0123456789");
-// 	printf("\n");
-// 	ft_putnbr_base(53, "0123456789abcdef");
-// }
+/*
+#include <stdio.h>
+int		main(void)
+{
+	ft_putnbr_base(-12, "01");
+	printf("\n");
+	ft_putnbr_base(40, "poneyvif");
+	printf("\n");
+	ft_putnbr_base(894867, "0123456789");
+	printf("\n");
+	ft_putnbr_base(53, "0123456789abcdef");
+}*/
