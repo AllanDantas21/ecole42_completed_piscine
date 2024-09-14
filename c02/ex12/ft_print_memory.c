@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/13 23:07:55 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 00:48:10 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	unsigned int		limit;
 	unsigned long long	memory;
 
-	if (size == 1)
+	if (size < 1)
 		return (addr);
 	i = 0;
 	while (i <= size)
@@ -95,15 +95,13 @@ void	*ft_print_memory(void *addr, unsigned int size)
 		write(1, "\n", 1);
 		i += 16;
 	}
-	write(1, "\n", 1);
 	return (addr);
 }
-
 /*
 #include <stdio.h>
 int main() {
 	char str[] = "Bonjour les aminches\t\n\tc'est fou\tce \
 	qu'on peutfaire avec\t\n\tprint_memory\n\nlol.lol\n ";
-	ft_print_memory(str, sizeof(str));
+	ft_print_memory((void *)str, sizeof(str));
 	return 0;
-}*/
+}*/	
