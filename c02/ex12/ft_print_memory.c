@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/13 19:18:06 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/13 23:07:55 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	write(1, "\n", 1);
 	return (addr);
 }
+
 /*
 #include <stdio.h>
 int main() {

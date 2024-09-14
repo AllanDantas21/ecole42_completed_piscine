@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:46:46 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/13 00:27:11 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/13 23:02:18 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,24 +17,29 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_hex(char c)
+void	ft_puthex(unsigned char c)
 {
-	ft_putchar('\\');
-	ft_putchar("0123456789abcdef"[c / 16]);
-	ft_putchar("0123456789abcdef"[c % 16]);
+	char	*hex;
+
+	hex = "0123456789abcdef";
+	ft_putchar(hex[c / 16]);
+	ft_putchar(hex[c % 16]);
 }
 
 void	ft_putstr_non_printable(char *str)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] >= 32 && str[i] <= 126)
-			ft_putchar(str[i]);
+		if (str[i] < 32 || str[i] == 127)
+		{
+			ft_putchar('\\');
+			ft_puthex(str[i]);
+		}
 		else
-			ft_print_hex(str[i]);
+			ft_putchar(str[i]);
 		i++;
 	}
 }
@@ -47,7 +52,7 @@ int main() {
 
 
 	// Teste: Apenas não imprimíveis
-	char str4[] = "\t\n\r";
+	char str4[] = "\a\n\r";
 	ft_putstr_non_printable(str4);
 	ft_putchar('\n');
 
