@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 00:48:10 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 00:57:18 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-static void	ft_print_address(unsigned long long addr)
+static void	ft_print_address(unsigned long addr)
 {
 	const char	*hex = "0123456789abcdef";
 	char		address[16];
@@ -34,7 +34,7 @@ static void	ft_print_address(unsigned long long addr)
 	write(1, ": ", 2);
 }
 
-static void	ft_hex_content(unsigned char *memory, unsigned int limit)
+static void	ft_hex_content(unsigned char *addr, unsigned int limit)
 {
 	unsigned int	i;
 
@@ -43,8 +43,8 @@ static void	ft_hex_content(unsigned char *memory, unsigned int limit)
 	{
 		if (i < limit)
 		{
-			write(1, &"0123456789abcdef"[memory[i] / 16], 1);
-			write(1, &"0123456789abcdef"[memory[i] % 16], 1);
+			write(1, &"0123456789abcdef"[addr[i] / 16], 1);
+			write(1, &"0123456789abcdef"[addr[i] % 16], 1);
 		}
 		else
 			write(1, "  ", 2);
@@ -80,7 +80,6 @@ void	*ft_print_memory(void *addr, unsigned int size)
 {
 	unsigned int		i;
 	unsigned int		limit;
-	unsigned long long	memory;
 
 	if (size < 1)
 		return (addr);
@@ -88,10 +87,9 @@ void	*ft_print_memory(void *addr, unsigned int size)
 	while (i <= size)
 	{
 		limit = adjust_limit(i, size);
-		memory = (unsigned long long)addr + i;
-		ft_print_address(memory + i);
-		ft_hex_content(addr + i, limit);
-		ft_print_chars(addr + i, limit);
+		ft_print_address((unsigned long)addr + i);
+		ft_hex_content((unsigned char *)addr + i, limit);
+		ft_print_chars((unsigned char *)addr + i, limit);
 		write(1, "\n", 1);
 		i += 16;
 	}
@@ -104,4 +102,4 @@ int main() {
 	qu'on peutfaire avec\t\n\tprint_memory\n\nlol.lol\n ";
 	ft_print_memory((void *)str, sizeof(str));
 	return 0;
-}*/	
+}*/
