@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 00:56:52 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 00:57:18 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 01:04:32 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ static void	ft_print_address(unsigned long addr)
 
 static void	ft_hex_content(unsigned char *addr, unsigned int limit)
 {
+	const char	*hex = "0123456789abcdef";
 	unsigned int	i;
 
 	i = 0;
@@ -43,8 +44,8 @@ static void	ft_hex_content(unsigned char *addr, unsigned int limit)
 	{
 		if (i < limit)
 		{
-			write(1, &"0123456789abcdef"[addr[i] / 16], 1);
-			write(1, &"0123456789abcdef"[addr[i] % 16], 1);
+			write(1, &hex[addr[i] / 16], 1);
+			write(1, &hex[addr[i] % 16], 1);
 		}
 		else
 			write(1, "  ", 2);
