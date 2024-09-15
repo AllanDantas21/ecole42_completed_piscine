@@ -6,20 +6,14 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 02:33:06 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/10 15:55:12 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 23:59:21 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-static inline int	abs(int abs)
-{
-	if (abs < 0)
-		return (-abs);
-	return (abs);
-}
-
-# define ABS abs
+#define ABS(x) (((x) + ((x) >> (sizeof(x) * 8 - 1))) \
+	^ ((x) >> (sizeof(x) * 8 - 1)))
 
 #endif
