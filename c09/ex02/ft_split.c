@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 00:08:13 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 15:58:22 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 20:49:23 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,7 @@ char	**ft_split(char *str, char *charset)
 #include <stdio.h>
 int main()
 {
-	char *str = "eu gos#to de arr,oz";
+	char *str = "eu gos###to ###    de arr,oz";
 	char *charset = " #,";
 	char **arr = ft_split(str, charset);
 	int i = 0;

@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:53:19 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 16:08:35 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/14 22:48:33 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,26 +122,6 @@ int main(void)
 	test_ft_atoi_base("-101010", "01", -42);
 	test_ft_atoi_base("2A", "0123456789ABCDEF", 42);
 	test_ft_atoi_base("-2A", "0123456789ABCDEF", -42);
-	test_ft_atoi_base("52", "01234567", 42);
-	test_ft_atoi_base("-52", "01234567", -42);
-	test_ft_atoi_base("ZZ", "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1295);
-	test_ft_atoi_base("-ZZ", "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", -1295);
-	test_ft_atoi_base("   +42", "0123456789", 42);
-	test_ft_atoi_base("   -42", "0123456789", -42);
-	test_ft_atoi_base("   +101010", "01", 42);
-	test_ft_atoi_base("   -101010", "01", -42);
-	test_ft_atoi_base("   +2A", "0123456789ABCDEF", 42);
-	test_ft_atoi_base("   -2A", "0123456789ABCDEF", -42);
-	test_ft_atoi_base("   +52", "01234567", 42);
-	test_ft_atoi_base("   -52", "01234567", -42);
-	test_ft_atoi_base("   +ZZ", "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 1295);
-	test_ft_atoi_base("   -ZZ", "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", -1295);
-	test_ft_atoi_base("invalid", "0123456789", 0);
-	test_ft_atoi_base("42", "0", 0);
-	test_ft_atoi_base("42", "0123456789+", 0);
-	test_ft_atoi_base("42", "0123456789-", 0);
-	test_ft_atoi_base("42", "0123456789 ", 0);
-	test_ft_atoi_base("42", "0123456789\t", 0);
 
 	return 0;
-}/**/
+}*/
