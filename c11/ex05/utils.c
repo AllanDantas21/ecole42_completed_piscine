@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 00:32:26 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/16 01:33:16 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/16 01:38:12 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,29 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_atoi(char *nptr)
+int	ft_atoi(char *str)
 {
-	int	res;
+	int	result;
 	int	sign;
+	int	i;
 
-	res = 0;
+	result = 0;
 	sign = 1;
-	while ((*nptr == 32) || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	while (str[i] == '+' || str[i] == '-')
 	{
-		if (*nptr == '-')
-			sign = -1;
-		nptr++;
+		if (str[i] == '-')
+			sign *= -1;
+		i++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res *= 10;
-		res += *nptr++ - '0';
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
-	return ((res * sign));
+	return (result * sign);
 }
 
 void	ft_putnbr(int nbr)
