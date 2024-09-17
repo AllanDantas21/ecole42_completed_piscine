@@ -6,14 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 02:33:06 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 23:59:21 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 01:54:29 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-#define ABS(x) (((x) + ((x) >> (sizeof(x) * 8 - 1))) \
-	^ ((x) >> (sizeof(x) * 8 - 1)))
+# define ABS(x) (x * (x > 0) + -x * (x < 0))
 
 #endif
