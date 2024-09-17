@@ -6,11 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 02:00:32 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 02:10:04 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 02:12:33 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
+static int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 
@@ -20,7 +20,7 @@ int	ft_strcmp(char *s1, char *s2)
 	return (s1[i] - s2[i]);
 }
 
-void	swap_str(char **a, char **b)
+static void	swap_str(char **a, char **b)
 {
 	char	*temp;
 
