@@ -6,15 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 00:18:48 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/16 01:35:10 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 01:46:57 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int		ft_atoi(char *nptr);
-int		ft_strlen(char *str);
-void	ft_putnbr(int nbr);
+#include "do_op.h"
 
 static int	invalid_op(char *op)
 {
@@ -54,21 +50,6 @@ static int	find_an_error(int ac, char **av)
 		write(1, "0", 1);
 		return (1);
 	}
-	return (0);
-}
-
-static int	do_op(int a, char op, int b)
-{
-	if (op == '+')
-		return (a + b);
-	if (op == '-')
-		return (a - b);
-	if (op == '*')
-		return (a * b);
-	if (op == '/')
-		return (a / b);
-	if (op == '%')
-		return (a % b);
 	return (0);
 }
 

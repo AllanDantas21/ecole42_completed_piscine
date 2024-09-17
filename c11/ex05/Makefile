@@ -1,8 +1,8 @@
 NAME = do_op
-SRC =	main.c utils.c 
+SRC =	main.c utils.c do_op.c operations.c
 OBJ = ${SRC:.c=.o}
-CC			= cc
-CFLAGS		= -Wall -Werror -Wextra
+CC	= cc
+CFLAGS	= -Wall -Werror -Wextra
 RM = rm -rf
 
 all:	$(NAME) 
