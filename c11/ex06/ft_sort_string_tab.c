@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 02:00:32 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 02:07:01 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 02:10:04 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s1[i] && s2[i] && s1[i] == s2[i])
@@ -22,7 +22,7 @@ int	ft_strcmp(char *s1, char *s2)
 
 void	swap_str(char **a, char **b)
 {
-	char *temp;
+	char	*temp;
 
 	temp = *a;
 	*a = *b;
@@ -47,7 +47,7 @@ void	ft_sort_string_tab(char **tab)
 		i++;
 	}
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -60,4 +60,4 @@ int main()
 		i++;
 	}
 	return 0;
-}
+}*/
