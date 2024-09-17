@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 14:40:20 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 14:49:43 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:02:58 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_tail.h"
 
-int    ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 

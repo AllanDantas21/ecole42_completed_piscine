@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:51:10 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 14:52:28 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/17 15:03:30 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static int	open_file(char *file_name)
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
 	{
-		write(1, "tail: cannot open \'", 19);	
+		write(1, "tail: cannot open \'", 19);
 		write(1, file_name, ft_strlen(file_name));
 		write(1, "' for reading: ", 15);
 		ft_error(strerror(errno));
@@ -75,7 +75,7 @@ static void	ft_print_lines(int fd, int first_line)
 	}
 }
 
-int ft_cat(char *file_name)
+int	ft_cat(char *file_name)
 {
 	int		fd;
 	int		first_line;
