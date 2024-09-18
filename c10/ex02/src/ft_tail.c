@@ -6,11 +6,16 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:51:10 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 15:03:30 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 00:01:32 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_tail.h"
+#include "stdio.h"
+	/* -c dá handle dos ultimos n bytes do arquivo 
+	bytes++; -> conta todos os bytes do arquivo, se tive -c de flag
+	vou separa a count lines;
+	*/
 
 static int	count_lines(char *file_name)
 {
@@ -75,17 +80,24 @@ static void	ft_print_lines(int fd, int first_line)
 	}
 }
 
-int	ft_cat(char *file_name)
+int	ft_cat(char *file_name, int	option)
 {
 	int		fd;
 	int		first_line;
+	int		first_bytes;
 
-	fd = open(file_name, O_RDONLY);
-	first_line = count_lines(file_name);
+	//fd = open(file_name, O_RDONLY);
 	fd = open_file(file_name);
 	if (!fd)
 		return (0);
-	ft_print_lines(fd, first_line);
+	if (!option)
+		first_line = count_lines(file_name);
+	else if (option)
+		first_bytes = count_bytes(file_name, option);
+	if (!option)
+		ft_print_lines(fd, first_line);
+	if (option)
+		ft_print_bytes(fd, first_bytes);
 	close(fd);
 	return (1);
 }
@@ -94,9 +106,12 @@ int	main(int argc, char **argv)
 {
 	if (argc == 1)
 		write(1, "File name missing.\n", 19);
-	if (argc > 2)
+	if (argc == 3 || argc > 4)
 		write(1, "Too many arguments.\n", 20);
 	if (argc == 2)
-		ft_cat(argv[1]);
+		ft_cat(argv[1], 0);
+	else if (argc == 4 && ft_strcmp(argv[1], "-c") == 0)
+		ft_cat(argv[3], ft_atoi(argv[2]));
 	return (0);
 }
+
