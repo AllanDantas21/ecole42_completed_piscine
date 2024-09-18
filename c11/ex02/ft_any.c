@@ -6,16 +6,16 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:47:49 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/15 23:54:06 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 01:49:38 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_any(char **tab, int(*f)(char*))
+int	ft_any(char **tab, int (*f)(char*))
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(tab[i])
+	while (tab[i])
 	{
 		if (f(tab[i]))
 			return (1);

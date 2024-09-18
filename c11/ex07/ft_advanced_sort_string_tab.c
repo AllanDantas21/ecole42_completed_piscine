@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 02:09:14 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/17 02:14:45 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 01:49:55 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	swap_str(char **a, char **b)
 	*b = temp;
 }
 
-void ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
+void	ft_advanced_sort_string_tab(char **tab, int (*cmp)(char *, char *))
 {
 	int	i;
 	int	j;
