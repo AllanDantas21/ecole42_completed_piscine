@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_file.c                                     :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 00:25:20 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 01:38:32 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/18 01:45:36 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/18 01:47:50 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <fcntl.h>
-
-int	ft_display_file(char *file_name)
+int	ft_strlen(char *str)
 {
-	int		fd;
-	char	buffer[1];
+	int	i;
 
-	fd = open(file_name, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	while (read(fd, buffer, 1))
-		write(1, buffer, 1);
-	close(fd);
-	return (1);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

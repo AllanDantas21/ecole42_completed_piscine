@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_file.c                                     :+:      :+:    :+:   */
+/*   ft_hexdump.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/15 00:25:20 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 01:38:32 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/18 01:42:16 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/18 01:46:57 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <fcntl.h>
+#ifndef FT_HEXDUMP_H
+# define FT_HEXDUMP_H
 
-int	ft_display_file(char *file_name)
-{
-	int		fd;
-	char	buffer[1];
+# include <unistd.h>
+# include <fcntl.h>
+# include <errno.h>
+# include <string.h>
 
-	fd = open(file_name, O_RDONLY);
-	if (fd == -1)
-		return (0);
-	while (read(fd, buffer, 1))
-		write(1, buffer, 1);
-	close(fd);
-	return (1);
-}
+# define BUFFER_SIZE 16
+
+#endif

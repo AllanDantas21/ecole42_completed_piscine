@@ -1,5 +1,5 @@
 NAME = ft_hexdump
-SRC =	src/main.c
+SRC =	src/ft_hexdump.c
 OBJ = ${SRC:.c=.o}
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra

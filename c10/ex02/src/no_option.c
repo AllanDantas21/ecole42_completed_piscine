@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:16:39 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 00:21:05 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 01:41:33 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_tail.h"
 
-static int  count_lines(char *file_name)
+static int	count_lines(char *file_name)
 {
 	int		fd;
 	char	buffer[1];
@@ -33,7 +33,7 @@ static int  count_lines(char *file_name)
 	return (0);
 }
 
-static void ft_print_lines(int fd, int first_line)
+static void	ft_print_lines(int fd, int first_line)
 {
 	char	buffer[1];
 	int		count;
@@ -59,16 +59,16 @@ static void ft_print_lines(int fd, int first_line)
 	}
 }
 
-void    tail_no_option(char *file_name)
+void	tail_no_option(char *file_name)
 {
-		int	first_line;
-		int	fd;
-		
-		fd = open_file(file_name);
-		if (!fd)
-			return ;
-		first_line = count_lines(file_name);
-		ft_print_lines(fd, first_line);
-		close(fd);
+	int	first_line;
+	int	fd;
+
+	fd = open_file(file_name);
+	if (!fd)
 		return ;
+	first_line = count_lines(file_name);
+	ft_print_lines(fd, first_line);
+	close(fd);
+	return ;
 }
