@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:49:41 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 16:31:44 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 02:18:43 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,42 +47,44 @@ static int	is_safe(int board[10], int row, int col)
 	return (1);
 }
 
-static int	solve_queens(int board[10], int col)
+static void	solve_queens(int board[10], int col, int *count)
 {
 	int	i;
-	int	count;
 
 	i = 0;
-	count = 0;
-	if (col >= 10)
+	if (col == 10)
 	{
 		print_board(board, col);
-		return (1);
+		(*count)++;
+		return ;
 	}
 	while (i < 10)
 	{
 		if (is_safe(board, i, col))
 		{
 			board[col] = i;
-			count += solve_queens(board, col + 1);
+			solve_queens(board, col + 1, count);
 		}
 		i++;
 	}
-	return (count);
 }
 
 int	ft_ten_queens_puzzle(void)
 {
 	int	board[10];
 	int	i;
+	int	count;
 
 	i = 0;
+	count = 0;
 	while (i < 10)
 		board[i++] = 0;
-	return (solve_queens(board, 0));
+	solve_queens(board, 0, &count);
+	return (count);
 }
 /*
+#include <stdio.h>
 int main(void)
 {
-	return ft_ten_queens_puzzle();
+	printf("\nretorno: %d\n", ft_ten_queens_puzzle());
 }*/
