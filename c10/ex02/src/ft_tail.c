@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:51:10 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 00:17:52 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 00:20:32 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	open_file(char *file_name)
 	return (fd);
 }
 
-int	ft_cat(char *file_name, int	option)
+static int	ft_cat(char *file_name, int	option)
 {
 	if (option)
 		tail_with_option(file_name, option);
@@ -49,4 +49,3 @@ int	main(int argc, char **argv)
 		ft_cat(argv[3], ft_atoi(argv[2]));
 	return (0);
 }
-

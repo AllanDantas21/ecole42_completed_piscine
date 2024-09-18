@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 23:56:28 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 00:19:11 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/18 00:20:35 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	ft_print_bytes(int fd, int first_bytes)
 		{
 			if (bytes >= first_bytes)
 				write(1, buffer, 1);
-            bytes++;
+			bytes++;
 		}
 	}
 }
@@ -56,7 +56,7 @@ static void	ft_print_bytes(int fd, int first_bytes)
 void    tail_with_option(char *file_name, int option)
 {
 	int		first_bytes;
-    int     fd;
+	int     fd;
 
 	fd = open_file(file_name);
 	if (!fd)
