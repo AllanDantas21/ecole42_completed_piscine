@@ -1,5 +1,5 @@
 NAME = ft_tail
-SRC = src/ft_tail.c src/utils.c src/handle_option.c
+SRC = src/ft_tail.c src/utils.c src/handle_option.c src/no_option.c
 OBJ = ${SRC:.c=.o}
 CC			= cc
 CFLAGS		= -Wall -Werror -Wextra
