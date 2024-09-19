@@ -1,44 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   ft_list_push_strs.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 01:03:08 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/19 16:59:35 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/19 16:18:45 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/19 16:28:03 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-t_list	*ft_list_last(t_list *begin_list)
+/*t_list	*ft_create_elem(void *data)
 {
-	if (!begin_list)
-		return (begin_list);
-	while (begin_list->next)
-		begin_list = begin_list->next;
-	return (begin_list);
-}
+	t_list *node;
 
-/*
-#include <stdio.h>
-#include <string.h>
-
-t_list	*ft_create_elem(void *data)
-{
-	t_list  *node;
-
-	if (!data)
-		return (NULL);
 	node = malloc(sizeof(t_list));
-	if (node)
-	{
-		node->data = data;
-		node->next = NULL;
-	}
+	if (!node)
+		return (NULL);
+	node->data = data;
+	node->next = NULL;
 	return (node);
-}
+}*/
 
 t_list	*ft_list_push_strs(int size, char **strs)
 {
@@ -56,12 +40,16 @@ t_list	*ft_list_push_strs(int size, char **strs)
 	}
 	return (new);
 }
-
+/*
+#include <stdio.h>
 int main(void)
 {
-	char *strs[] = {"Hello", "World", "42", "rio"};
-	t_list *list = ft_list_push_strs(4, strs);
-	t_list *last = ft_list_last(list);
-	printf("%s\n", (char *)last->data);
+	char *strs[] = {"Hello", "World", "42"};
+	t_list *list = ft_list_push_strs(3, strs);
+	while (list)
+	{
+		printf("%s\n", (char *)list->data);
+		list = list->next;
+	}	
 	return (0);
 }*/

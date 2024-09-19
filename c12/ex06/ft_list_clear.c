@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   ft_list_clear.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 01:03:08 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/19 16:59:35 by aldantas         ###   ########.fr       */
+/*   Created: 2024/09/19 16:28:31 by aldantas          #+#    #+#             */
+/*   Updated: 2024/09/19 16:51:27 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
 
-t_list	*ft_list_last(t_list *begin_list)
+void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 {
-	if (!begin_list)
-		return (begin_list);
-	while (begin_list->next)
-		begin_list = begin_list->next;
-	return (begin_list);
+	t_list	*node;
+
+	while (begin_list)
+	{
+		node = begin_list->next;
+		free_fct(begin_list->data);
+		free(begin_list);
+		begin_list = node;
+	}
 }
 
 /*
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+
+void free_fct(void *data)
+{
+	free(data);
+}
 
 t_list	*ft_create_elem(void *data)
 {
-	t_list  *node;
+	t_list *node;
 
-	if (!data)
-		return (NULL);
 	node = malloc(sizeof(t_list));
-	if (node)
-	{
-		node->data = data;
-		node->next = NULL;
-	}
+	if (!node)
+		return (NULL);
+	node->data = data;
+	node->next = NULL;
 	return (node);
 }
 
@@ -59,9 +66,14 @@ t_list	*ft_list_push_strs(int size, char **strs)
 
 int main(void)
 {
-	char *strs[] = {"Hello", "World", "42", "rio"};
-	t_list *list = ft_list_push_strs(4, strs);
-	t_list *last = ft_list_last(list);
-	printf("%s\n", (char *)last->data);
+	char *strs[] = {strdup("Hello"), strdup("World"), strdup("42")};
+	t_list *list = ft_list_push_strs(3, strs);
+	t_list *begin_list = list;
+	while (list)
+	{
+		printf("%s\n", (char *)list->data);
+		list = list->next;
+	}
+	ft_list_clear(begin_list, free_fct);
 	return (0);
 }*/

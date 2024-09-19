@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 17:13:26 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 17:22:12 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/19 17:00:14 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_create_elem(void *data)
 {
-	t_list  *node;
+	t_list	*node;
 
 	if (!data)
 		return (NULL);
