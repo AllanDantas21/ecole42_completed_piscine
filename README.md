@@ -1,18 +1,19 @@
 
--   **Refazendo a Piscine 42**:
-    ## lembrar de compilar com as flags e testar cada lista antes de entregar ##
-    ## lembrar de tirar o comentario duplo "/**/" do final dos arquivos -> erro no WWW
+-   #Refazendo a Piscine 42**:
     ## c8 e c9 -> remover arquivos de testes antes da entrega
-     - C00-> 100%
-     - C01 -> 100%
-     - C02 -> 100%
-     - C03 -> 100%
-     - C04 -> 100%
-     - C05 -> 100%
-     - c06 -> 100%
-     - c07 -> 100%
-     - c08 -> 100% 
-     - c09 -> 100%
-     - c10 -> 75%
-     - c11 -> 100%
-     - c12 -> 40%
+    | List | %% |
+    | --- | --- |
+    | [**C00**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c00) | 100% -> validated |
+    | [**C01**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c01) | 100% -> validated|
+    | [**C02**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c02) | 100% -> validated|
+    | [**C03**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c03) | 100% -> not validated|
+    | [**C04**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c04) | 100% -> validated|
+    | [**C05**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c05) | 100% -> not validated|
+    | [**C06**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c06) | 100% -> validated|
+    | [**C07**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c07) | 100% -> validated|
+    | [**C08**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c08) | 100% -> validated|
+    | [**C09**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c09) | 100% -> not validated|
+    | [**C10**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c10) | 100% -> not validated|
+    | [**C11**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c11) | 100% -> not validated|
+    | [**C12**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c12) | 100% -> not validated|
+    | [**C13**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c13) | 100% -> not validated|
