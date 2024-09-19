@@ -6,32 +6,31 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 13:10:55 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 01:17:39 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:55:48 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>*/
-
 char	*ft_strcat(char *dest, char *src)
 {
+	int	d_len;
 	int	i;
-	int	c;
 
+	d_len = 0;
+	while (dest[d_len] != '\0')
+		d_len++;
 	i = 0;
-	c = 0;
-	while (dest[c] != '\0')
-		c++;
 	while (src[i] != '\0')
 	{
-		dest[c] = src[i];
+		dest[d_len + i] = src[i];
 		i++;
-		++c;
 	}
-	dest[c] = '\0';
+	dest[d_len + i] = '\0';
 	return (dest);
 }
 
-/*int	main()
+/*
+#include <stdio.h>
+int	main()
 {
 	char dest[] = "aba";
 	char src[] = "cate";

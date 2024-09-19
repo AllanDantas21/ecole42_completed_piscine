@@ -6,12 +6,9 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/09 10:21:20 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 01:15:32 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/09/19 14:52:05 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*#include<unistd.h>
-#include<stdio.h>*/
 
 int	ft_strcmp(char *s1, char *s2)
 {
@@ -29,7 +26,9 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-/*int	main(void)
+/*
+#include<stdio.h>
+int	main(void)
 {
 	printf("%d", ft_strcmp("abd","abf"));
 }*/
