@@ -1,21 +1,24 @@
-NAME = libft.a
-SRC = srcs/ft_putchar.c srcs/ft_swap.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c
-OBJ = ${SRC:.c=.o}
-CC	= cc
-CFLAGS = -Wall -Wextra -Werror
-RM = rm -rf
+SRCS	= srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_strlen.c srcs/ft_strcmp.c srcs/ft_swap.c
+OBJS	= ${SRCS:.c=.o}
+INCS	= includes
+NAME	= libft.a
+LIBC	= ar rc
+CC		= cc
+RM		= rm -f
+CFLAGS	= -Wall -Wextra -Werror
 
-all: $(NAME)
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCS}
 
-$(NAME): $(OBJ)
-	ar -rcs $(NAME) $(OBJ)
+${NAME}: ${OBJS}
+	${LIBC} ${NAME} ${OBJS}
+
+all: ${NAME}
 
 clean:
-	$(RM) $(OBJ)
+	${RM} ${OBJS}
 
 fclean: clean
-	$(RM) $(NAME)
+	${RM} ${NAME}
 
 re: fclean all
-
-.PHONY: all clean fclean re
