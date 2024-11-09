@@ -1,6 +1,5 @@
 
--   #Refazendo a Piscine 42**:
-    ## c8 e c9 -> remover arquivos de testes antes da entrega
+-   #Refazendo a Piscine 42**:    
     | List | %% |
     | --- | --- |
     | [**C00**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c00) | 100% -> validated |
