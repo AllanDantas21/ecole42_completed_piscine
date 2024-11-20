@@ -6,10 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:00:25 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 15:00:39 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:01:21 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_list.h"
 
 void ft_list_reverse(t_list **begin_list)
 {

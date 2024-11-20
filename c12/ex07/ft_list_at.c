@@ -6,10 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:00:31 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 15:00:38 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:01:24 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_list.h"
 
 t_list *ft_list_at(t_list *begin_list, unsigned int nbr)
 {

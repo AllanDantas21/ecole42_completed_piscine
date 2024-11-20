@@ -6,10 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:28:31 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 15:00:36 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/20 15:01:29 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_list.h"
 
 void	ft_list_clear(t_list *begin_list, void (*free_fct)(void *))
 {
