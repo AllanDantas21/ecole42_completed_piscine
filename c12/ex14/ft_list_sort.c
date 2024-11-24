@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_sort.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/21 10:05:31 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/22 19:04:45 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/23 23:28:11 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,28 @@
 
 void ft_list_sort(t_list **begin_list, int (*cmp)())
 {
-    t_list *tmp;
+    t_list *i;
+    t_list *j;
+    void *temp;
 
-    tmp = *begin_list;
-    while (tmp->next)
+    if (!begin_list || !*begin_list)
+        return;
+
+    i = *begin_list;
+    while (i)
     {
-        if ((*cmp)(tmp->data, tmp->next->data) > 0)
+        j = i->next;
+        while (j)
         {
-            tmp = *begin_list;
-            while (tmp->next)
+            if ((*cmp)(i->data, j->data) > 0)
             {
-                if (cmp(tmp->data, tmp->next->data) > 0)
-                {
-                    void *temp;
-                    temp = tmp->data;
-                    tmp->data = tmp->next->data;
-                    tmp->next->data = temp;
-                    tmp = *begin_list;
-                }
-                else
-                    tmp = tmp->next;
+                temp = i->data;
+                i->data = j->data;
+                j->data = temp;
             }
+            j = j->next;
         }
-        else
-            tmp = tmp->next;
+        i = i->next;
     }
 }
 
