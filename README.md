@@ -14,5 +14,5 @@
     | [**C09**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c09) | 100% -> validated|
     | [**C10**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c10) | 75% -> not validated|
     | [**C11**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c11) | 100% -> not validated|
-    | [**C12**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c12) | 65% -> not validated|
-    | [**C13**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c13) | 0% -> not validated|
+    | [**C12**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c12) | 100% -> not validated|
+    | [**C13**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c13) | 15% -> not validated|
