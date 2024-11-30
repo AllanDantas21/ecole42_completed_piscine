@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 01:42:16 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/18 01:46:57 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:03:38 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,8 @@
 # include <string.h>
 
 # define BUFFER_SIZE 16
+
+void	*ft_hexdump_opt(void *addr, unsigned int size);
+int     ft_strcmp(const char *s1, const char *s2);
 
 #endif
