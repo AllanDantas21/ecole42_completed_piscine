@@ -6,47 +6,51 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:21:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/30 15:09:32 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:29:34 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hexdump.h"
+#include <stdio.h>
 
 static size_t	get_all_bytes(char *file_name)
 {
 	int		fd;
 	size_t	size = 0;
-	ssize_t	bytes_read;
-	char	buffer[4096];
+	size_t	bytes_read;
+	char	buffer[BUFFER_SIZE];
 
 	fd = open(file_name, O_RDONLY);
 	if (fd == -1)
-		return ((size_t)-1);
-	while ((bytes_read = read(fd, buffer, sizeof(buffer))) > 0)
+		return (0);
+	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 		size += bytes_read;
 	close(fd);
 	return (size);
 }
 
-static int	ft_hexdump(char *file_name, int argc, char *argv[])
+static int	ft_hexdump(int argc, char *argv[])
 {
 	size_t	size;
 
-	size = get_all_bytes(argv[1]);
-	if (size == (size_t)-1)
-		return (1);
+	size = 0;
 	if (argc == 2)
+	{
+		size = get_all_bytes(argv[1]);
 		write(1, "Future no handle\n", 17);
+	}
 	else if (argc == 3 && !ft_strcmp(argv[2], "-C"))
-		ft_hexdump_opt(file_name, size);
+	{
+		size = get_all_bytes(argv[2]);
+		ft_hexdump_opt(argv[2], size);
+	}
 	return (0);
 }
 
 int	main(int argc, char **argv)
 {
-	if (argc < 2 || argc > 3)
+	if (argc <= 1 || argc >= 4)
 		return (write(2, "Error\n", 6), 0);
-	if (ft_hexdump(argv[1], argc, argv))
-		write(2, "Error\n", 6);
+	ft_hexdump(argc, argv);
 	return (0);
 }

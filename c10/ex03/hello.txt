@@ -1,2 +1,1 @@
-Bonjour les aminches\t\n\tc'est fou\tce \
-	qu'on peutfaire \0avec\t\n\tprint_memory\n\nlol.lol\n 
+Bonjour les aminches\t\n\tc'est fou\tce \qu'on peutfaire \0avec\t\n\tprint_memory\n\nlol.lol\n 
