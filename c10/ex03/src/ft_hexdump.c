@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:21:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/30 15:29:34 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/11/30 15:34:34 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ static size_t	get_all_bytes(char *file_name)
 		return (0);
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 		size += bytes_read;
+	buffer[bytes_read] = '\0';
 	close(fd);
 	return (size);
 }
@@ -39,7 +40,7 @@ static int	ft_hexdump(int argc, char *argv[])
 		size = get_all_bytes(argv[1]);
 		write(1, "Future no handle\n", 17);
 	}
-	else if (argc == 3 && !ft_strcmp(argv[2], "-C"))
+	if (argc == 3 && !ft_strcmp(argv[1], "-C"))
 	{
 		size = get_all_bytes(argv[2]);
 		ft_hexdump_opt(argv[2], size);
