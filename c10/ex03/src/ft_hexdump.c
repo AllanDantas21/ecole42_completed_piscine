@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:21:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/01 11:51:36 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/01 12:05:21 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_hexdump(int argc, char *argv[])
 	if (argc == 2)
 	{
 		size = get_all_bytes(argv[1]);
-		ft_hexdump_opt(argv[1], size);
+		ft_hexdump_no_opt(argv[1], size);
 	}
 	if (argc == 3 && !ft_strcmp(argv[1], "-C"))
 	{
