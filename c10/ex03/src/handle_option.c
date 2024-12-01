@@ -6,11 +6,12 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 14:49:04 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/01 12:03:40 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/01 12:31:24 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hexdump.h"
+#include <stdio.h>
 
 static void	ft_print_address(unsigned long addr)
 {
@@ -89,12 +90,17 @@ void	ft_hexdump_opt(char *file_name, unsigned int size)
 
     fd = open(file_name, O_RDONLY);
     if (fd == -1 || size < 1){
+        perror("Error opening file");
         return ;
     }
 	i = 0;
 	while (i < size)
 	{
-		read(fd, addr, BUFFER_SIZE);
+		if (read(fd, addr, BUFFER_SIZE) == -1) {
+            perror("Error reading file");
+            close(fd);
+            return;
+        }
 		limit = adjust_limit(i, size);
 		ft_print_address((unsigned long)i);
 		ft_hex_content((unsigned char *)addr, limit);

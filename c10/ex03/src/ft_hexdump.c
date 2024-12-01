@@ -6,12 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:21:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/01 12:05:21 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/01 12:33:16 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_hexdump.h"
 #include <stdio.h>
+#include <errno.h>
 
 static size_t	get_all_bytes(char *file_name)
 {
@@ -21,10 +22,17 @@ static size_t	get_all_bytes(char *file_name)
 	char	buffer[BUFFER_SIZE];
 
 	fd = open(file_name, O_RDONLY);
-	if (fd == -1)
+	if (fd == -1) {
+		perror("Error opening file");
 		return (0);
+	}
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 		size += bytes_read;
+	if (bytes_read == -1) {
+		perror("Error reading file");
+		close(fd);
+		return (0);
+	}
 	buffer[bytes_read] = '\0';
 	close(fd);
 	return (size);
