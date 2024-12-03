@@ -17,4 +17,4 @@
 | [**C10**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c10) | ![75%](https://img.shields.io/badge/Status-75%25-yellow) - Não Validado |
 | [**C11**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c11) | ![100%](https://img.shields.io/badge/Status-100%25-brightgreen) - Não Validado |
 | [**C12**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c12) | ![100%](https://img.shields.io/badge/Status-100%25-brightgreen) - Não Validado |
-| [**C13**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c13) | ![30%](https://img.shields.io/badge/Status-15%25-red) - Não Validado |
+| [**C13**](https://github.com/AllanDantas21/42Piscine_reloaded/tree/main/c13) | ![30%](https://img.shields.io/badge/Status-30%25-red) - Não Validado |
