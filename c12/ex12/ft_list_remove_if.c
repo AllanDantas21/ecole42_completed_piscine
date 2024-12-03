@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:18:20 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 15:32:15 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:35:19 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,65 +34,66 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (
     }
 }
 
-// ******* TEST MAIN *******
-// #include <stdio.h>
-// #include <stdlib.h>
-// #include <string.h>
+/*
+******* TEST MAIN *******
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-// int cmp(void *data, void *data_ref)
-// {
-//     return strcmp((char *)data, (char *)data_ref);
-// }
+int cmp(void *data, void *data_ref)
+{
+    return strcmp((char *)data, (char *)data_ref);
+}
 
-// void free_fct(void *data)
-// {
-//     free(data);
-// }
+void free_fct(void *data)
+{
+    free(data);
+}
 
-// t_list *create_elem(void *data)
-// {
-//     t_list *new_elem = (t_list *)malloc(sizeof(t_list));
-//     if (new_elem)
-//     {
-//         new_elem->data = data;
-//         new_elem->next = NULL;
-//     }
-//     return new_elem;
-// }
+t_list *create_elem(void *data)
+{
+    t_list *new_elem = (t_list *)malloc(sizeof(t_list));
+    if (new_elem)
+    {
+        new_elem->data = data;
+        new_elem->next = NULL;
+    }
+    return new_elem;
+}
 
-// void print_list(t_list *list)
-// {
-//     while (list)
-//     {
-//         printf("%s -> ", (char *)list->data);
-//         list = list->next;
-//     }
-//     printf("NULL\n");
-// }
+void print_list(t_list *list)
+{
+    while (list)
+    {
+        printf("%s -> ", (char *)list->data);
+        list = list->next;
+    }
+    printf("NULL\n");
+}
 
-// int main()
-// {
-//     t_list *list = create_elem(strdup("one"));
-//     list->next = create_elem(strdup("two"));
-//     list->next->next = create_elem(strdup("three"));
-//     list->next->next->next = create_elem(strdup("two"));
-//     list->next->next->next->next = create_elem(strdup("four"));
+int main()
+{
+    t_list *list = create_elem(strdup("one"));
+    list->next = create_elem(strdup("two"));
+    list->next->next = create_elem(strdup("three"));
+    list->next->next->next = create_elem(strdup("two"));
+    list->next->next->next->next = create_elem(strdup("four"));
 
-//     printf("Original list:\n");
-//     print_list(list);
+    printf("Original list:\n");
+    print_list(list);
 
-//     ft_list_remove_if(&list, "two", cmp, free_fct);
+    ft_list_remove_if(&list, "two", cmp, free_fct);
 
-//     printf("Modified list:\n");
-//     print_list(list);
+    printf("Modified list:\n");
+    print_list(list);
 
-//     // Free remaining elements
-//     while (list)
-//     {
-//         t_list *temp = list;
-//         list = list->next;
-//         free_fct(temp->data);
-//         free(temp);
-//     }
-//     return 0;
-// }
+    // Free remaining elements
+    while (list)
+    {
+        t_list *temp = list;
+        list = list->next;
+        free_fct(temp->data);
+        free(temp);
+    }
+    return 0;
+}*/

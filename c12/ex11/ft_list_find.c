@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:14:24 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 15:17:55 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:35:03 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,25 +25,26 @@ t_list *ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)())
     return (NULL);
 }
 
-// #include <stdio.h>
-// #include <string.h>
+/*
+#include <stdio.h>
+#include <string.h>
 
-// int cmp(void *data, void *data_ref)
-// {
-//     return (strcmp((char *)data, (char *)data_ref));
-// }
+int cmp(void *data, void *data_ref)
+{
+    return (strcmp((char *)data, (char *)data_ref));
+}
 
-// int main()
-// {
-//     t_list node3 = { "node3", NULL };
-//     t_list node2 = { "node2", &node3 };
-//     t_list node1 = { "node1", &node2 };
-//     t_list *found;
+int main()
+{
+    t_list node3 = { "node3", NULL };
+    t_list node2 = { "node2", &node3 };
+    t_list node1 = { "node1", &node2 };
+    t_list *found;
 
-//     found = ft_list_find(&node1, "node3", cmp);
-//     if (found)
-//         printf("Found: %s\n", (char *)found->data);
-//     else
-//         printf("Not found\n");
-//     return 0;
-// }
+    found = ft_list_find(&node1, "node3", cmp);
+    if (found)
+        printf("Found: %s\n", (char *)found->data);
+    else
+        printf("Not found\n");
+    return 0;
+}*/

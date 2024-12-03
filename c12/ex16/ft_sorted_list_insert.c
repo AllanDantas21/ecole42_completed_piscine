@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:22:05 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/24 18:49:15 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:37:26 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,37 +63,38 @@ static void ft_list_push_front(t_list **begin_list, void *data)
     }
 }
 
-// TEST MAIN
-// #include <stdio.h>
-// #include <string.h>
+/*
+TEST MAIN
+#include <stdio.h>
+#include <string.h>
 
-// int cmp(void *a, void *b)
-// {
-//     return strcmp((char *)a, (char *)b);
-// }
+int cmp(void *a, void *b)
+{
+    return strcmp((char *)a, (char *)b);
+}
 
-// int main(void)
-// {
-//     t_list *list = NULL;
+int main(void)
+{
+    t_list *list = NULL;
 
-//     ft_sorted_list_insert(&list, "banana", cmp);
-//     ft_sorted_list_insert(&list, "apple", cmp);
-//     ft_sorted_list_insert(&list, "cherry", cmp);
+    ft_sorted_list_insert(&list, "banana", cmp);
+    ft_sorted_list_insert(&list, "apple", cmp);
+    ft_sorted_list_insert(&list, "cherry", cmp);
 
-//     t_list *current = list;
-//     while (current)
-//     {
-//         printf("%s\n", (char *)current->data);
-//         current = current->next;
-//     }
+    t_list *current = list;
+    while (current)
+    {
+        printf("%s\n", (char *)current->data);
+        current = current->next;
+    }
 
-//     // Free the list
-//     while (list)
-//     {
-//         t_list *temp = list;
-//         list = list->next;
-//         free(temp);
-//     }
+    // Free the list
+    while (list)
+    {
+        t_list *temp = list;
+        list = list->next;
+        free(temp);
+    }
 
-//     return 0;
-// }
+    return 0;
+} */

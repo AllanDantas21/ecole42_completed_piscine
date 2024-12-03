@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 18:13:48 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/24 18:25:11 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/03 12:37:09 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,44 +36,45 @@ void ft_list_reverse_fun(t_list *begin_list)
     }
 }
 
-// #include <stdio.h>
-// #include <stdlib.h>
+/*
+#include <stdio.h>
+#include <stdlib.h>
 
-// t_list *create_elem(void *data)
-// {
-//     t_list *new_elem = (t_list *)malloc(sizeof(t_list));
-//     if (new_elem)
-//     {
-//         new_elem->data = data;
-//         new_elem->next = NULL;
-//     }
-//     return new_elem;
-// }
+t_list *create_elem(void *data)
+{
+    t_list *new_elem = (t_list *)malloc(sizeof(t_list));
+    if (new_elem)
+    {
+        new_elem->data = data;
+        new_elem->next = NULL;
+    }
+    return new_elem;
+}
 
-// void print_list(t_list *list)
-// {
-//     while (list)
-//     {
-//         printf("%s ", (char *)list->data);
-//         list = list->next;
-//     }
-//     printf("\n");
-// }
+void print_list(t_list *list)
+{
+    while (list)
+    {
+        printf("%s ", (char *)list->data);
+        list = list->next;
+    }
+    printf("\n");
+}
 
-// int main()
-// {
-//     t_list *list = create_elem("one");
-//     list->next = create_elem("two");
-//     list->next->next = create_elem("three");
-//     list->next->next->next = create_elem("four");
+int main()
+{
+    t_list *list = create_elem("one");
+    list->next = create_elem("two");
+    list->next->next = create_elem("three");
+    list->next->next->next = create_elem("four");
 
-//     printf("Original list:\n");
-//     print_list(list);
+    printf("Original list:\n");
+    print_list(list);
 
-//     ft_list_reverse_fun(list);
+    ft_list_reverse_fun(list);
 
-//     printf("Reversed list:\n");
-//     print_list(list);
+    printf("Reversed list:\n");
+    print_list(list);
 
-//     return 0;
-// }
+    return 0;
+} */
