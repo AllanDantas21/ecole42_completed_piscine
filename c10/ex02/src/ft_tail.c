@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/17 13:51:10 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/25 21:40:20 by aldantas         ###   ########.fr       */
+/*   Updated: 2024/12/25 21:46:40 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ static int	ft_cat(char *file_name, int option)
 int	main(int argc, char **argv)
 {
 	if (argc == 1)
-		write(1, "File name missing.\n", 19);
+		write(2, "File name missing.\n", 19);
 	if (argc == 3 || argc > 4)
-		write(1, "Too many arguments.\n", 20);
+		write(2, "Too many arguments.\n", 20);
 	if (argc == 2)
 		ft_cat(argv[1], 0);
 	else if (argc == 4 && ft_strcmp(argv[1], "-c") == 0)
