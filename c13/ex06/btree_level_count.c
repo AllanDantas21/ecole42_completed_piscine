@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 21:59:26 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/15 22:11:41 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/04 02:36:14 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ft_btree.h"
 
-int tree_level_count(t_btree *root)
+int btree_level_count(t_btree *root)
 {
     int left;
     int right;
