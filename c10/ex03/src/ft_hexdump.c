@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 00:21:53 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/25 21:40:14 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/04 02:25:53 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,6 @@ static size_t	get_all_bytes(char *file_name)
 	}
 	while ((bytes_read = read(fd, buffer, BUFFER_SIZE)) > 0)
 		size += bytes_read;
-	if (bytes_read == 0) {
-		perror("Error reading file");
-		close(fd);
-		return (0);
-	}
 	buffer[bytes_read] = '\0';
 	close(fd);
 	return (size);
