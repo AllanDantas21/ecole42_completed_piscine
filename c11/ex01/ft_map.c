@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 23:33:34 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/15 23:48:38 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/05 19:44:36 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	*ft_map(int *tab, int length, int (*f)(int))
 
 	i = 0;
 	result = malloc(sizeof(int) * length);
+	if (!result)
+		return ((void *)0);
 	while (i < length)
 	{
 		result[i] = f(tab[i]);
