@@ -1,6 +1,7 @@
 # Refazendo a Piscine 42
 
 ## Visão Geral do Progresso
+*adicionar mais validações nos ex da c10*
 
 | Lista | Status |
 | --- | --- |

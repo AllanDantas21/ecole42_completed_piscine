@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 22:03:10 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/04 03:03:01 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/05 19:58:34 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,51 +65,51 @@ void	btree_apply_by_level(t_btree *root, void (*applyf)(void *item,
         free(levels);
 }
 
+/*
+Test
+#include <stdio.h>
+#include <stdlib.h>
 
-// Test
-// #include <stdio.h>
-// #include <stdlib.h>
+t_btree	*btree_create_node(void *item)
+{
+    t_btree	*node;
 
-// t_btree	*btree_create_node(void *item)
-// {
-//     t_btree	*node;
+    node = (t_btree *)malloc(sizeof(t_btree));
+    if (node)
+    {
+        node->item = item;
+        node->left = NULL;
+        node->right = NULL;
+    }
+    return (node);
+}
 
-//     node = (t_btree *)malloc(sizeof(t_btree));
-//     if (node)
-//     {
-//         node->item = item;
-//         node->left = NULL;
-//         node->right = NULL;
-//     }
-//     return (node);
-// }
+void applyf(void *item, int current_level, int is_first_elem)
+{
+    printf("Level %d: %s (first: %d)\n", current_level, (char *)item, is_first_elem);
+}
 
-// void applyf(void *item, int current_level, int is_first_elem)
-// {
-//     printf("Level %d: %s (first: %d)\n", current_level, (char *)item, is_first_elem);
-// }
+int main(void)
+{
+    t_btree *root;
 
-// int main(void)
-// {
-//     t_btree *root;
+    root = btree_create_node("root");
+    root->left = btree_create_node("left");
+    root->right = btree_create_node("right");
+    root->left->left = btree_create_node("left->left");
+    root->left->right = btree_create_node("left->right");
+    root->right->left = btree_create_node("right->left");
+    root->right->right = btree_create_node("right->right");
 
-//     root = btree_create_node("root");
-//     root->left = btree_create_node("left");
-//     root->right = btree_create_node("right");
-//     root->left->left = btree_create_node("left->left");
-//     root->left->right = btree_create_node("left->right");
-//     root->right->left = btree_create_node("right->left");
-//     root->right->right = btree_create_node("right->right");
+    btree_apply_by_level(root, applyf);
 
-//     btree_apply_by_level(root, applyf);
+    free(root->left->left);
+    free(root->left->right);
+    free(root->right->left);
+    free(root->right->right);
+    free(root->left);
+    free(root->right);
+    free(root);
 
-//     free(root->left->left);
-//     free(root->left->right);
-//     free(root->right->left);
-//     free(root->right->right);
-//     free(root->left);
-//     free(root->right);
-//     free(root);
-
-//     return 0;
-// }
+    return 0;
+}*/
