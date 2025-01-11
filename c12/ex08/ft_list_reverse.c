@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 15:00:25 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/03 12:33:21 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/11 12:16:20 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void ft_list_reverse(t_list **begin_list)
     *begin_list = prev;
 }
 
-******* TEST MAIN ******* 
+/******* TEST MAIN ******* 
 #include <stdio.h>
 #include <stdlib.h>
 t_list *ft_create_elem(void *data)
@@ -44,7 +44,6 @@ t_list *ft_create_elem(void *data)
     return new_elem;
 }
 
-/* TESTING MAIN
 void print_list(t_list *list)
 {
     while (list)

@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:32:58 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 16:08:18 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/11 12:19:59 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	ft_atoi(char *str)
 	}
 	return (result * sign);
 }
+
 /*
 #include <stdio.h>
 

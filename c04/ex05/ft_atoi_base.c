@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 01:53:19 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 22:48:33 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/11 12:21:02 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int	ft_atoi_base(char *str, char *base)
 	res = convert_base(str, i, base);
 	return (res * sign);
 }
+
 /*
 #include <stdio.h>
 int ft_atoi_base(char *str, char *base);

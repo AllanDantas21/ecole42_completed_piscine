@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:35:21 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/14 16:20:36 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/11 12:19:32 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 void	ft_putnbr(int nbr)
 {
-	char	*base;
-
-	base = "0123456789";
+	const char	*base = "0123456789";
 	if (nbr == -2147483648)
 	{
 		write(1, "-2147483648", 11);
@@ -32,6 +30,7 @@ void	ft_putnbr(int nbr)
 		ft_putnbr(nbr / 10);
 	write(1, &base[nbr % 10], 1);
 }
+
 /*
 int main(void)
 {
