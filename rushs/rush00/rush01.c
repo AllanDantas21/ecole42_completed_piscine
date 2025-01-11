@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 18:19:36 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/06 22:53:42 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/11 11:58:03 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,18 @@ void    rush(int x, int y)
         c = 1;
         while (c <= x)
         {
-            if ((c == 1) && (l == 1))
-                ft_putchar(47);
-            else if ((c == x) && (l == y) && (y > 1) && (x > 1))
-                ft_putchar(47);
+            if (((c == 1) && (l == 1))
+                || ((c == x) && (l == y) && (y > 1) && (x > 1)))
+                ft_putchar('/');
             else if ((c == 1) && (l == y) || (c == x ) && (l == 1))
-                ft_putchar(92);
+                ft_putchar('\\');
             else if (c == 1 || l == 1 || l == y || c == x)
-                ft_putchar(42);
+                ft_putchar('*');
             else
-                ft_putchar(32);
+                ft_putchar(' ');
             c++;
         }
-        ft_putchar(10);
+        ft_putchar('\n');
         l++;
     }
 }
