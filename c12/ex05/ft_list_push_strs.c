@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 16:18:45 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/20 14:35:43 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 12:58:13 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ t_list	*ft_list_push_strs(int size, char **strs)
 	}
 	return (new);
 }
+
 /*
 #include <stdio.h>
 int main(void)
