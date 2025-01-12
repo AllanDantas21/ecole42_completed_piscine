@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 18:18:49 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/06 22:41:58 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 16:02:41 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }

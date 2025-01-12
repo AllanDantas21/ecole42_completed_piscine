@@ -6,12 +6,12 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/29 18:19:40 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/06 22:47:36 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 16:02:39 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(void)
+int	main(void)
 {
-    rush(5, 5);
-    return (0);
+	rush(5, 5);
+	return (0);
 }
