@@ -6,13 +6,13 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/15 00:25:18 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/05 19:55:15 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 12:51:16 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_display_file(char *file_name);
+int			ft_display_file(char *file_name);
 static int	ft_strlen(char *str);
 static int	ft_strcmp(char *s1, char *s2);
 
@@ -23,10 +23,10 @@ int	main(int argc, char **argv)
 	if (argc > 2)
 		write(2, "Too many arguments.\n", 20);
 	if (argc == 2)
-	{	
-		if (ft_strcmp(argv[1], ".") == 0 || ft_strcmp(argv[1], "/") == 0 
-		|| ft_strcmp(argv[1], "..") == 0 || ft_strcmp(argv[1], "./") == 0 
-		|| ft_strcmp(argv[1], "../") == 0)
+	{
+		if (ft_strcmp(argv[1], ".") == 0 || ft_strcmp(argv[1], "/") == 0
+			|| ft_strcmp(argv[1], "..") == 0 || ft_strcmp(argv[1], "./") == 0
+			|| ft_strcmp(argv[1], "../") == 0)
 		{
 			write(2, argv[1], ft_strlen(argv[1]));
 			write(2, ": Is a directory\n", 17);

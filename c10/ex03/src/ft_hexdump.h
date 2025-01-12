@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 01:42:16 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/01 12:31:23 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 12:52:19 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 
 void	ft_hexdump_no_opt(char *file_name, unsigned int size);
 void	ft_hexdump_opt(char *file_name, unsigned int size);
-int     ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 
 #endif
