@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:42:51 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/12 13:14:25 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 15:56:24 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ void	*btree_search_item(t_btree *root, void *data_ref,
 //     return (new_node);
 // }
 
-// void btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *))
+// void btree_insert_data(t_btree **root, void *item,
+//		int (*cmpf)(void *, void *))
 // {
 //     if (*root == NULL)
 //         *root = btree_create_node(item);

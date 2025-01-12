@@ -6,11 +6,11 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/15 22:03:10 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/12 13:15:35 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 15:58:48 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_btree.h"
+#include "ft_btree.h"
 #include <stdlib.h>
 
 static int	btree_level_count(t_btree *root)
@@ -20,7 +20,7 @@ static int	btree_level_count(t_btree *root)
 
 	left = 0;
 	if (!root)
-		return 0;
+		return (0);
 	left = btree_level_count(root->left);
 	right = btree_level_count(root->right);
 	if (left > right)
@@ -54,6 +54,7 @@ void	btree_apply_by_level(t_btree *root, void (*applyf)(void *item,
 	int	*levels;
 
 	if (root)
+	{
 		count = btree_level_count(root);
 		levels = malloc(sizeof(int) * count);
 		if (!levels)
@@ -63,6 +64,7 @@ void	btree_apply_by_level(t_btree *root, void (*applyf)(void *item,
 			levels[i++] = 0;
 		call(root, 0, levels, applyf);
 		free(levels);
+	}
 }
 
 /*
@@ -84,9 +86,9 @@ t_btree	*btree_create_node(void *item)
 	return (node);
 }
 
-void applyf(void *item, int current_level, int is_first_elem)
+void applyf(void *item, int current_level, int first)
 {
-	printf("Level %d: %s (first: %d)\n", current_level, (char *)item, is_first_elem);
+printf("Lvl %d: %s (f: %d)\n", current_level, (char *)item, first);
 }
 
 int main(void)

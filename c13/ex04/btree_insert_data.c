@@ -6,17 +6,19 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:42:35 by aldantas          #+#    #+#             */
-/*   Updated: 2025/01/12 13:14:06 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 15:55:53 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "ft_btree.h"
-# include <stdlib.h>
+#include "ft_btree.h"
+#include <stdlib.h>
 
-void	btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *)) {
-	t_btree *new_node;
+void	btree_insert_data(t_btree **root, void *item,
+	int (*cmpf)(void *, void *))
+{
+	t_btree	*new_node;
 
-	if (root == NULL) 
+	if (root == NULL)
 		return ;
 	if (*root == NULL)
 	{
@@ -28,11 +30,11 @@ void	btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *)) 
 		new_node->right = NULL;
 		*root = new_node;
 	}
-	else 
+	else
 	{
-		if (cmpf(item, (*root)->item) < 0) 
+		if (cmpf(item, (*root)->item) < 0)
 			btree_insert_data(&(*root)->left, item, cmpf);
-		else 
+		else
 			btree_insert_data(&(*root)->right, item, cmpf);
 	}
 }
