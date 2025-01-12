@@ -6,35 +6,35 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:42:35 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/03 15:43:15 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 13:14:06 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "ft_btree.h"
 # include <stdlib.h>
 
-void btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *)) {
-    t_btree *new_node;
+void	btree_insert_data(t_btree **root, void *item, int (*cmpf)(void *, void *)) {
+	t_btree *new_node;
 
-    if (root == NULL) 
-        return;
-    if (*root == NULL)
-    {
-        new_node = malloc(sizeof(t_btree));
-        if (new_node == NULL)
-            return;
-        new_node->item = item;
-        new_node->left = NULL;
-        new_node->right = NULL;
-        *root = new_node;
-    }
-    else 
-    {
-        if (cmpf(item, (*root)->item) < 0) 
-            btree_insert_data(&(*root)->left, item, cmpf);
-        else 
-            btree_insert_data(&(*root)->right, item, cmpf);
-    }
+	if (root == NULL) 
+		return ;
+	if (*root == NULL)
+	{
+		new_node = malloc(sizeof(t_btree));
+		if (new_node == NULL)
+			return ;
+		new_node->item = item;
+		new_node->left = NULL;
+		new_node->right = NULL;
+		*root = new_node;
+	}
+	else 
+	{
+		if (cmpf(item, (*root)->item) < 0) 
+			btree_insert_data(&(*root)->left, item, cmpf);
+		else 
+			btree_insert_data(&(*root)->right, item, cmpf);
+	}
 }
 
 // #include <stdio.h>

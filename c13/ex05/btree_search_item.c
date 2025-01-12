@@ -6,27 +6,28 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:42:51 by aldantas          #+#    #+#             */
-/*   Updated: 2024/12/15 22:09:57 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 13:14:25 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_btree.h"
 
-void *btree_search_item(t_btree *root, void *data_ref, int (*cmpf)(void *, void *))
+void	*btree_search_item(t_btree *root, void *data_ref,
+	int (*cmpf)(void *, void *))
 {
-    void *result;
+	void	*result;
 
-    if (root == 0)
-        return (0);
-    result = btree_search_item(root->left, data_ref, cmpf);
-    if (result != 0)
-        return (result);
-    if (cmpf(root->item, data_ref) == 0)
-        return (root->item);
-    result = btree_search_item(root->right, data_ref, cmpf);
-    if (result != 0)
-        return (result);
-    return (0);
+	if (root == 0)
+		return (0);
+	result = btree_search_item(root->left, data_ref, cmpf);
+	if (result != 0)
+		return (result);
+	if (cmpf(root->item, data_ref) == 0)
+		return (root->item);
+	result = btree_search_item(root->right, data_ref, cmpf);
+	if (result != 0)
+		return (result);
+	return (0);
 }
 
 // #include <stdio.h>

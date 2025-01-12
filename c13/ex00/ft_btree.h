@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/24 19:00:44 by aldantas          #+#    #+#             */
-/*   Updated: 2024/11/24 19:01:44 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/01/12 13:16:15 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 typedef struct s_btree
 {
-    struct s_btree  *left;
-    struct s_btree  *right;
-    void            *item;
+	struct s_btree	*left;
+	struct s_btree	*right;
+	void			*item;
 }   t_btree;
 
 #endif
