@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aldantas <aldantas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 22:08:47 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/11 19:41:52 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:52:57 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,3 @@ void	ft_print_comb2(void)
 		first++;
 	}
 }
-
-/*int	main(void)
-{
-	ft_print_comb2();
-}*/

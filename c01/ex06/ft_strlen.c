@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 12:19:03 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:16:03 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:54:22 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,3 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-/*int main(void)
-{
-        char ch[10] = {'a','b','a','c','a','t','e'};
-
-        ft_strlen(ch);
-}*/

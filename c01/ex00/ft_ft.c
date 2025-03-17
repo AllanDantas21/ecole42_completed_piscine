@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 18:28:41 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:16:12 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:53:58 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,3 @@ void	ft_ft(int *nbr)
 {
 	*nbr = 42;
 }
-/*int	main()
-{		
-	int var;
-	int *ptr;
- 	
-	ptr = &var;	
-	ft_ft(ptr);
-		
-	write(1, &var, 2);
-	
-}*/

@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 23:06:40 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/11 03:12:38 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:53:49 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,3 @@ void	ft_print_combn(int n)
 	if (n > 0 && n < 10)
 		ft_recursive_combn(n, 0, arr, -1);
 }
-/*
-int main()
- {
-	ft_print_combn(2);
- 	return 0;
-}*/

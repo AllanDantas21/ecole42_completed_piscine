@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 18:48:16 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:16:04 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:54:18 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,3 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
-/*int main()
-{
-	char *test = "Hello World!"; 
-
-	ft_putstr(test);
-}*/

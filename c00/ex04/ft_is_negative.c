@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 17:41:39 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:09:53 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:52:30 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ void	ft_is_negative(int n)
 		write(1, "N", 1);
 	}
 }
-
-/*int	main(void)
-{
-	ft_is_negative();
-}*/

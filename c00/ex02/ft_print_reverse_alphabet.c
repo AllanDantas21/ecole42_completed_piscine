@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 16:37:05 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:10:33 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:52:29 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,3 @@ void	ft_print_reverse_alphabet(void)
 		alphabet--;
 	}
 }
-
-/*int	main()
-{
-	ft_print_reverse_alphabet();
-}*/

@@ -14,7 +14,6 @@ int main(void)
 {
     printf("Testing ft_rev_int_tab:\n");
     
-    // Test with odd length array
     int arr1[] = {1, 2, 3, 4, 5};
     int size1 = 5;
     
@@ -26,7 +25,6 @@ int main(void)
     printf("After: ");
     print_array(arr1, size1);
     
-    // Test with even length array
     int arr2[] = {10, 20, 30, 40};
     int size2 = 4;
     
@@ -38,7 +36,6 @@ int main(void)
     printf("After: ");
     print_array(arr2, size2);
     
-    // Test with single element
     int arr3[] = {42};
     int size3 = 1;
     

@@ -6,7 +6,7 @@
 /*   By: aldantas <aldantas@student.42.rio>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 14:46:09 by aldantas          #+#    #+#             */
-/*   Updated: 2024/09/06 00:13:12 by aldantas         ###   ########.fr       */
+/*   Updated: 2025/03/17 16:54:06 by aldantas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ void	ft_swap(int *a, int *b)
 	*a = *b;
 	*b = swap;
 }
-
-/*int	main()
-{
-	int	a = 10;
-	int	b = 15;
-
-	ft_swap(&a, &b);
-
-	printf("%d", a);
-	printf("%d", b);
-}*/
